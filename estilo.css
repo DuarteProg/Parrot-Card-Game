@@ -2,15 +2,24 @@
     box-sizing: border-box;
 }
 
-.layout-inteiro {
-    position: relative;
-width: 1110px;
-height: 629px;
-background: #EEF9BF;
+body {
+    font-family: 'Righteous', cursive;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    background: #EEF9BF;
+    align-items: center;
+    flex-direction: column    
 }
 
-.texto-cima {
-position: absolute;
+body h1 {
+    
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    margin-left: 100px;
+}
+
+h1 {
 width: 100%;
 height: 63px;
 left: 285px;
@@ -18,21 +27,75 @@ top: 40px;
 font-weight: 700;
 font-size: 56px;
 color: #75B79E;
+margin-top: 40px;
 }
 
-.carta1 {
-    position: absolute;
+.cartasLayout1 {
+  display: flex;
+}
+
+.cartasLayout2 {
+    display: flex;
+  }
+
+  .cartasLayout3 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .carta img {
+    width: 100px;
+    height: 100px;
+    margin: 24px 7px 22px 10px;
+  }
+
+  .carta {
+    background: #A7E9AF;
+    border: 1px solid #99CEA8;
+    box-sizing: border-box;
+    border-radius: 5px;
     width: 117px;
     height: 146px;
-    left: 122px;
-    top: 150px;
-    background-image: url(Rectangle\ 2.png);
-    background-repeat: no-repeat;
+    margin-right: 34px;
+    margin-bottom: 34px;
+  }
+
+  @media screen and (max-width: 600px) {
+
+h1 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    width: 312px;
+    height: 63px;
+    margin-right: 50px;
 }
 
-.carta1 img {
-width: 100px;
-height: 100px;
-margin-top: 24px;
-margin-left: 10px;
+
+
+.cartasLayout1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 47px;
+}
+.cartasLayout2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cartasLayout3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.layout-inteiro span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 90px;
 }
