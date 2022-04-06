@@ -11,8 +11,7 @@ body {
     flex-direction: column    
 }
 
-body h1 {
-    
+body h1{
     justify-content: center;
     margin-top: 40px;
     margin-bottom: 30px;
@@ -71,15 +70,14 @@ h1 {
     margin-right: 50px;
 }
 
-
-
-.cartasLayout1 {
+.cartasLayout1{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 47px;
 }
+
 .cartasLayout2 {
     display: flex;
     flex-direction: column;
@@ -93,7 +91,7 @@ h1 {
     align-items: center;
 }
 
-.layout-inteiro span {
+.layout-inteiro span{
     display: flex;
     align-items: center;
     justify-content: center;
