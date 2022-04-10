@@ -40,9 +40,11 @@ justify-content: center;
   backface-visibility: hidden;
 }
 
-.cartas:hover {
+.cartas.selecionado {
   transform: rotateY(180deg);
 }
+
+
 
 .carta-frente {
   background-color: white;
@@ -85,10 +87,6 @@ margin-bottom: 34px;
       grid-gap: 34px;
       justify-content: center;
       align-items: center;
-    }
-
-    .cartas {
-   
     }
 
     @media screen and (max-width: 600px) {

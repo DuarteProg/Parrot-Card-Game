@@ -33,7 +33,7 @@ function comparador() {
 function criarCarta(indiceCarta) {
   let papagaio = papagaios[indiceCarta]
     return `
-<div class="cartas">
+<div class="cartas" onclick="selecionarCarta(this)">
        <div class="carta-atras">
            <img src="./front.png" width="100px" height="100px" alt="papagaio">
        </div>
@@ -52,4 +52,6 @@ function aparecerCartas() {
     }
 }
 
-document.classlist.con
+function selecionarCarta(div) {
+div.classList.add("selecionado")
+}
