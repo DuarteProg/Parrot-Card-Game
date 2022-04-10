@@ -78,6 +78,19 @@ margin-bottom: 34px;
     gap: 34px;
     }
 
+    .tudao {
+      display: grid;
+      grid-template-columns: 0fr 0fr 0fr 0fr 0fr;
+      grid-auto-rows: minmax(40px, auto);
+      grid-gap: 34px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cartas {
+   
+    }
+
     @media screen and (max-width: 600px) {
 
 h1 {
@@ -108,7 +121,10 @@ color: #75B79E;
   flex-direction: column;
 }
 
-
-
-   
+.tudao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
     }
