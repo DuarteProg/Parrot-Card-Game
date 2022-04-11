@@ -8,7 +8,9 @@ while(quantidadeCartas % 2 !== 0 || quantidadeCartas > 14 || quantidadeCartas < 
 }
 
 let baralho = []
-
+primeiraJogada = null;
+segundaJogada = null;
+quantidadesDeJogadas = 0;
 
 cartasAleatorias();
 aparecerCartas();
@@ -53,5 +55,39 @@ function aparecerCartas() {
 }
 
 function selecionarCarta(div) {
-div.classList.add("selecionado")
+div.classList.add("selecionado");
+if(primeiraJogada === null) {
+    primeiraJogada = div;
+} else {
+    segundaJogada = div;
+    igualdadeCartas();
+    quantidadesDeJogadas += 1;
+}
+
+}
+
+function igualdadeCartas() {
+if(primeiraJogada.innerHTML === segundaJogada.innerHTML) {
+    primeiraJogada.classList.add("finalizado");
+    segundaJogada.classList.add("finalizado");
+    primeiraJogada = null;
+    segundaJogada = null;
+    setTimeout(fimDeJogo, 500);
+} else {
+    setTimeout(desvirarCartas , 1000);
+}
+}
+
+function desvirarCartas() {
+    primeiraJogada.classList.remove("selecionado");
+    segundaJogada.classList.remove("selecionado");
+    primeiraJogada = null;
+    segundaJogada = null;
+}
+
+function fimDeJogo() {
+let cartasComPar = document.querySelectorAll(".finalizado")
+if(cartasComPar.length === quantidadeCartas) {
+    alert(`Você ganhou em ${quantidadesDeJogadas} jogadas`)
+}
 }
